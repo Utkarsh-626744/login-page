@@ -1,0 +1,10 @@
+.illustration{
+    width: 800px;
+    margin-left: -50px;
+}
+@media only screen and (max-width:800px) {
+    .illustration {
+      width: 500px;
+      margin-left: 0px;
+    }
+  }

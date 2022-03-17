@@ -1,0 +1,33 @@
+.login-container {
+    /* min-height: 500px; */
+    /* min-width: 500px; */
+    /* border: 1px solid #aec4da; */
+    padding: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBF3FA;
+    /* background: linear-gradient(-120deg, #EBF3FA 0%,  #EBF3FA 50%, rgb(255, 255, 255) 50%,rgb(255, 255, 255) 100%); */
+    border-radius: 15px;
+    flex-direction: column;
+    /* margin-left: -100px; */
+}
+
+.login-container>div {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container svg{
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.login-container > button{
+    margin: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.register-btn{
+    color: black;
+}

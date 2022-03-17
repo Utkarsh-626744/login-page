@@ -1,0 +1,21 @@
+.App{
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(202, 202, 202); */
+  border-radius: 15px;
+}
+.App > div{
+  min-height: 500px;
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: crimson; */
+}
+@media only screen and (max-width: 1150px) {
+  .App {
+    flex-direction: column;
+  }
+}
