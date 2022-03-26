@@ -1,8 +1,6 @@
 import logo from './Logo (1).svg'
 import { Button, Link } from '@mui/material';
 import TextField from '@mui/material/TextField';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import LockIcon from '@mui/icons-material/Lock';
 import './Login.css'
 import { useState } from 'react';
 import { Navigate} from 'react-router-dom'
@@ -10,6 +8,14 @@ import Cookie from 'js-cookie'
 import passwordIcon from './Password (1).svg'
 import userIcon from './User ID.svg'
 import organizationIcon from './Organization (1).svg'
+import styled from '@emotion/styled';
+
+const sytledButton = styled(Button)({
+    '&:hover':{
+        backgroundColor: "#041836"
+    }
+})
+
 export default function Login() {
     const [organization,setOrganization] = useState("")
     const [username,setUsername] = useState("")
@@ -44,7 +50,8 @@ export default function Login() {
             onInput={onInputOrganization}
             required
             sx={{
-                color:"color.primary"
+                color:"color.primary",
+                width:"300px"
             }}
             />
         </div>
@@ -57,7 +64,8 @@ export default function Login() {
             onInput={onInputUsername}
             required
             sx={{
-                color:"color.primary"
+                color:"color.primary",
+                width:"300px"
             }}
             />
         </div>
@@ -72,12 +80,21 @@ export default function Login() {
             onInput={onInputPassword}
             required
             color='primary'
+            sx={{
+                color:"color.primary",
+                width:"300px"
+            }}
             />
         </div>
         <Button sx={{
             backgroundColor: "#041836",
-            fontWeight:"bold"
-        }} type="submit" disableElevation variant="contained">Login</Button>
+            fontWeight:"bold",
+            '&:hover':{
+                backgroundColor: "#041836"
+            }
+        }} type="submit" disableElevation variant="contained" inputProps={{
+            className:"btn"
+        }}>Login</Button>
         <Button  href="/register">Register</Button>
         <Link href="/forgot-password">forgot password?</Link>
     </form>
