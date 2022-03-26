@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EBF3FA;
+    background-color: white;
     /* background: linear-gradient(-120deg, #EBF3FA 0%,  #EBF3FA 50%, rgb(255, 255, 255) 50%,rgb(255, 255, 255) 100%); */
     border-radius: 15px;
     flex-direction: column;
@@ -14,20 +14,33 @@
 }
 
 .login-container>div {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.login-container svg{
-    margin-top: 10px;
+.login-container img{
+    margin-bottom: -15px;
     margin-right: 5px;
+    width: 25px;
+}
+.logo{
+    margin: 0;
+    margin-bottom: 20px !important;
+    width: 50% !important;
 }
 .login-container > button{
+    
     margin: 15px;
     margin-bottom: 20px;
     width: 100%;
 }
 .register-btn{
     color: black;
+}
+.css-1480iag-MuiInputBase-root-MuiInput-root:after {
+    border-bottom: 2px solid #1F64CC !important;
+}
+.css-1x51dt5-MuiInputBase-input-MuiInput-input:after {
+    border-bottom: 2px solid #1F64CC !important;
 }

@@ -1,26 +1,33 @@
-//import logo from './logo.svg';
-import { Route, Switch,Router } from 'react-router-dom';
+import { createTheme } from '@mui/system';
+import { render } from 'react-dom';
+import { Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import './App.css';
+import AfterLogin from './components/AfterLogin';
 import Illustration from './components/Illustration';
 import Login from './components/Login';
+const theme = createTheme({
+  palette: {
+    primary:{
+      main:'#1F64CC'
+    } 
+  }
+})
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
-      {/* <Router>
-      <Switch>
-        <Route exact path="/">
-          <> */}
+      <Routes>
+        <Route path="/" element={
+          <>
           <Illustration/>
           <Login/>
-          {/* </>
-        </Route> */}
-        
-        {/* <Route path="/loged-in" element={<h1>logged in</h1>} />
-      </Switch>
-      </Router> */}
-      
-      
+          </>
+        } />
+         <Route path="/loged-in" element={<AfterLogin/>} />
+      </Routes>
     </div>
+    </ThemeProvider>
   );
 }
 
